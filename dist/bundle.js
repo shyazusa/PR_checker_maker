@@ -193,7 +193,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\nconst bootstrap = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n__webpack_require__(/*! bootstrap/dist/css/bootstrap.css */ \"./node_modules/bootstrap/dist/css/bootstrap.css\");\n\nmakeCommand = () => {\n  console.log('test');\n  const pr_id = document.getElementById('pr_id').value;\n  const branch_name = document.getElementById('branch_name').value;\n  const ans = \"$ git fetch origin pull/\" + pr_id + \"/head:\" + branch_name + \" && git checkout \" + branch_name;\n  document.getElementById('ans').innerHTML = ans;\n}\n\n\n//# sourceURL=webpack:///./src/main.js?");
+eval("const $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\nconst bootstrap = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n__webpack_require__(/*! bootstrap/dist/css/bootstrap.css */ \"./node_modules/bootstrap/dist/css/bootstrap.css\");\n\nmakeCommand = () => {\n  const pr_id = $('#pr_id').val();\n  const branch_name = $('#branch_name').val();\n  const ans = \"$ git fetch origin pull/\" + pr_id + \"/head:\" + branch_name + \" && git checkout \" + branch_name;\n  $('#ans').html(ans);\n}\n\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ })
 
